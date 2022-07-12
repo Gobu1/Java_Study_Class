@@ -20,7 +20,7 @@ public class ObjectMain
 		System.out.println(monster.name);
 		System.out.println(monster.level);
 		System.out.println(monster.hp);
-		//------
+		//-----------
 	}
 
 }
