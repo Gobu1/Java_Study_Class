@@ -21,6 +21,23 @@ public class ObjectMain
 		System.out.println(monster.level);
 		System.out.println(monster.hp);
 		//-----------
+		Monster monster2 = new Monster();
+		monster2.name="오크";
+		monster2.hp=100;
+		monster2.level=100;
+		System.out.println(monster==monster2);
+		
+		//멤버변수의 데이터타입에는 제한이 없다.
+		Weapon sword = new Weapon();
+		sword.name="단검";
+		sword.damage=10;
+		sword.inchant=1;
+		monster.weapon = sword;
+		System.out.println(monster.weapon.name);
+		System.out.println(monster2.weapon.name);
+		
+		
+		
 	}
 
 }
