@@ -22,6 +22,13 @@ public class Method3
 		System.out.println("나이 "+age);
 		System.out.println("메일 "+email);
 	}
+	public void info2(Member member)
+	{
+		System.out.println(member.name);
+		System.out.println(member.age);
+		System.out.println(member.email);
+		member.age=100;
+	}
 	
 }
 //이름 나이 이메일주소를 받아서 출력 
