@@ -1,13 +1,29 @@
-package com.iu.object1.ex1;
+package com.iu.object1;
 
 import java.util.Scanner;
 
 public class StudentController 
 {
+	Scanner sc;
+	//객체생성
+	StudentView sv;
+	StudentService ssv;
+	Student [] students;
+	public StudentController()
+	{
+		sc = new Scanner(System.in);
+		sv = new StudentView();
+		ssv = new StudentService();
+	}
 	public void Start()
 	{
 		boolean x = true;
 		Scanner sc = new Scanner(System.in);
+		StudentService sv = new StudentService();
+		StudentController scr = new StudentController();
+		StudentView ssv = new StudentView();
+		
+		
 		while (x)
 		{
 			System.out.println("1. 학생 정보 입력   2. 학생 정보 조회   3. 학생 정보 검색");
@@ -17,12 +33,23 @@ public class StudentController
 			{
 			case 1 :
 				System.out.println("1. 학생 정보 입력");
+				sv.makeStudents();
 				break;
 			case 2 :
 				System.out.println("2. 학생 정보 조회");
+				this.sv.view(students);
 				break;
 			case 3 :
 				System.out.println("3. 학생 정보 검색");
+				Student student = sv.findStudent(students);
+				if(student !=null)
+				{
+					ssv.view(student);
+				}
+				else
+				{
+					ssv.view("찾는 학생번호가 없다");
+				}
 				break;
 			case 4 : 
 				System.out.println("4. 학생 정보 삭제");

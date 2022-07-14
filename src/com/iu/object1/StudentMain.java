@@ -1,4 +1,4 @@
-package com.iu.object1.ex1;
+package com.iu.object1;
 
 import java.util.Scanner;
 
